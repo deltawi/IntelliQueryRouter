@@ -12,8 +12,7 @@ query_translator = QueryTranslator(config_path=os.path.join(os.path.dirname(os.p
 @celery_app.task(name="worker.celery_worker.process_sql_query_task")
 def process_sql_query_task(query: str):
     try:
-        #results = query_translator.answer(query)
-        results = "We have 2 providers."
+        results = query_translator.answer(query)
         return json.dumps({'context': query, 'response': results})
     except Exception as e:
         return str(e)
