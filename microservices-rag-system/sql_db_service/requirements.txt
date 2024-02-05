@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+pika
+psycopg2-binary
+httpx
+celery
+celery[redis]

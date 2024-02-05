@@ -1,0 +1,5 @@
+celery==5.2.3            # Replace with the latest or desired version
+celery[redis]
+sqlalchemy==1.4.31       # If you are using SQLAlchemy in your tasks
+requests                 # If making HTTP requests to other services
+weaviate-client
